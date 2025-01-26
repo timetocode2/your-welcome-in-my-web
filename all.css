@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    --animated-world: first-anime-in-help 0.3s linear infinite forwards
+}
+
+@keyframes first-anime-in-help {
+    0% {
+        border: blue 4px solid;
+    }
+
+    100% {
+        border: rgb(5, 252, 5) 4px solid;
+    }
+}
+
+html {
+    background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
+    /* overflow-x: hidden; */
+
+}
+
+.white-border {
+    border: white solid;
+    border-width: 1px 4px 4px 4px;
+    color: #333333;
+}
+
+a:link,
+a:visited {
+    color: #720b0b;
+}
+
+body {
+    width: 100%;
+    height: 100vh overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+
+}
+
+.header1 {
+    background: linear-gradient(to bottom, #fdd2e5, #fdc3dc);
+    text-shadow: 2px 2px 5px rgb(224, 81, 81);
+    color: #720b0b;
+    height: 50px;
+    font-size: 37px;
+    font-weight: 600;
+    width: 100%;
+    border: solid white;
+    border-width: 4px 4px 0px 4px;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+.nav1 {
+    z-index: 100;
+    padding: 5px;
+    padding-left: 19px;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    background: linear-gradient(to bottom, #ffd6e8, #ffb3d9);
+    text-shadow: 2px 2px 5px rgb(221, 103, 103);
+    width: 100%;
+    box-shadow: 0px 9px 3px rgba(0, 0, 0, 0.575);
+
+    font-weight: 700;
+    height: 37px;
+    color: #720b0b;
+    text-decoration-line: underline;
+}
+
+.nav1 ul li::first-letter {
+    text-decoration: none;
+}
+
+.nav1 ul {
+    display: grid;
+    grid-template-columns: 26% 26% 26% 26%;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+}
+
+.nav1 ul li {
+    list-style: inside "❤";
+    padding-left: 6px;
+
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.scale:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+main {
+    width: 100%;
+    background: linear-gradient(to bottom, #ffb3d9, #ff7eb3);
+    position: relative;
+    top: 87px;
+    height: auto;
+}
+
+
+.sub-setting-nav,
+.sub-apps-nav {
+
+    width: 100%;
+    border: white solid;
+    border-width: 1px 4px 4px 4px;
+    height: 40px;
+    background-color: rgb(238, 122, 161);
+    position: fixed;
+    top: 86px;
+    box-shadow: 0px 9px 3px rgba(0, 0, 0, 0.678);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: translateX(500px); */
+    /* transition: opacity 0.3s ease, transform 0.4s ease-out; */
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#setting.sub-nav-show1,
+#apps.sub-nav-show2 {
+    visibility: visible;
+    opacity: 1;
+    /* transform: translateX(0px); */
+}
+
+
+.sub-setting-nav-ul,
+.sub-apps-nav-ul {
+    display: grid;
+    grid-template-columns: 26% 26% 26% 26%;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+/* themes fonts fun-calc about 
+
+here the section is started for sub setting bar */
+
+.setting-control {
+    border: white solid;
+    border-width: 4px 4px 4px 4px;
+    width: 48vw;
+    background: linear-gradient(to top, rgb(241, 147, 179), rgb(245, 107, 153));
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.623);
+    line-height: 40px;
+    justify-content: flex-start;
+    position: fixed;
+    top: 17vh;
+    /* visibility: hidden; */
+    box-shadow: 9px 9px 3px rgba(0, 0, 0, 0.678);
+    z-index: 1000;
+}
+
+.setting-control>span,
+.apps-control>span {
+    display: inline-block;
+    font-size: 3vh;
+    color: white;
+    margin: 3vh 0px;
+}
+
+.apps-control {
+    border: white solid;
+    border-width: 4px 4px 4px 4px;
+    width: 75vw;
+    background: linear-gradient(to top, rgb(241, 147, 179), rgb(245, 107, 153));
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.623);
+    line-height: 40px;
+    justify-content: flex-start;
+    position: fixed;
+    top: 25vh;
+    /* visibility: hidden; */
+    box-shadow: 9px 9px 3px rgba(0, 0, 0, 0.678);
+    z-index: 1000;
+}
+
+
+.calc-closebtn-control {
+    width: 40vw;
+    font-size: 25px;
+    height: 50px;
+    background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
+    box-shadow: 3px 3px 3px rgb(243, 73, 130);
+    color: white;
+    border: 4px white solid;
+    margin: 0px 0px 6vh 0px;
+    z-index: 1000;
+}
+
+.openApp {
+    width: 40vw;
+    font-size: 25px;
+    height: 50px;
+    background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
+    box-shadow: 3px 3px 3px rgb(243, 73, 130);
+    color: white;
+    border: 4px white solid;
+    margin: 6vh 0px 6vh 0px;
+
+}
+
+
+
+
+
+#helpcircle {
+    border: 4px white solid;
+    box-shadow: 3px 3px 3px black;
+    background: url(himanshu1.jpg);
+    background-size: contain;
+    width: 69px;
+    height: 69px;
+    border-radius: 100%;
+    position: fixed;
+    right: 1vh;
+    bottom: 3vh;
+    z-index: 100;
+    transition: 0.3s;
+    animation: var(--animated-world);
+}
+
+#helpbox {
+    height: 66vh;
+    width: 78vw;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.helpbox {
+    z-index: 10;
+    transition: 0.1s ease ;
+    box-shadow: inset 5px 5px 7px rgba(255, 62, 158, 0.664);
+
+    border: 5px white solid;
+    border-radius: 10px;
+    color: rgb(250, 18, 87);
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    overflow-y: scroll;
+    background: linear-gradient(to bottom, #c2a3b1dc, #fdb3d8ce);
+    visibility: hidden;
+}
+
+.helpbox>h1 {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 5px rgba(255, 62, 159, 0.8);
+
+}
+
+.help1{
+    margin: 19px 0px;
+    font-size: 19px;
+    line-height: 35px;
+}
+.help2{
+    height: 330vh;
+    width: 70vw;
+background-color: #c20c5e;
+
+}

@@ -1,0 +1,91 @@
+.calculator {
+    background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
+    position: relative;
+    top: 80px;
+    width: 100%;
+}
+
+
+.calc-scrn {
+    background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
+    height: 96vh;
+    position: relative;
+    top: -8vh;
+    line-height: 20px;
+    border: white solid;
+    border-width: 0px 4px 4px 4px;
+    width: 100%;
+    text-shadow: none;
+}
+
+.calc-scrn>span {
+    display: inline-block;
+    margin-top: 2vh;
+    width: 90%;
+    font-size: 15px;
+    color: white;
+    height: 5vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+}
+
+.calc-scrn2 {
+    height: 55vw;
+    width: 80vw;
+    border: 4px white solid;
+    background: linear-gradient(to bottom, #ffb3d9, #ff7eb3);
+    margin: 2vh auto 5vh auto;
+    box-shadow: inset 7px 7px 3px rgba(0, 0, 0, 0.678);
+    flex-wrap: wrap;
+    align-content: center;
+    overflow: scroll;
+    line-height: 4vh;
+    row-gap: 20px;
+    font-weight: 400;
+    color: white;
+    font-size: 30px;
+    text-shadow: #333333b2 9px 9px 3px;
+}
+
+.calc-scrn2-div {
+    font-size: 114vh;
+    text-shadow: 7px 7px 8px rgba(0, 0, 0, 0.5);
+}
+
+.calc-keypad {
+    height: 50vh;
+    background: linear-gradient(to bottom, #ffb3d9, #ff7eb3);
+    box-shadow: inset 7px 7px 3px rgba(0, 0, 0, 0.678);
+    border:4px white solid;
+margin-left: auto;    display: grid;
+margin-right: auto;
+    grid-template-columns: 21vw 21vw 21vw 21vw;
+    grid-template-rows:  15vw 15vw 15vw 15vw 15vw;
+    width: 95%;
+    row-gap: 2vw;
+    column-gap: 2vw;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+.calc-key {
+    border: 4px white solid;
+    width: 90%;
+    box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.678);
+    height: 90%;
+    font-size: 3vh;
+    background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
+
+}
+
+.calc-key:hover {
+    transform: rotateX(30deg) rotateY(0deg) rotateZ(0deg);
+    transition: 0.000001s;
+    background: linear-gradient(to top, rgb(209, 113, 145), rgb(192, 151, 165));
+    box-shadow: none;
+}
+
+
+
+

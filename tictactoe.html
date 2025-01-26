@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="tictactoe.css">
+</head>
+
+<body id="tictac-body" class="tictac-body flexcenter">
+    <div class="head-and-nav">
+        <header class="flexcenter header1">❤ Good Games</header>
+        <nav class="white-border flexcenter nav1">
+            <ul>
+                <a href="home.html">
+                    <li>Home</li>
+                </a>
+                <li id="setting-button">Setting</li>
+                <li id="apps-button">Apps</li>
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+            </ul>
+        </nav>
+    </div>
+    <!-- main tag starts from here lllllll -->
+    <div class="flexcenter calc-main">
+
+        <div id="setting" class="hidden sub-setting-nav">
+            <ul id="sub-setting-nav-ul" class="sub-setting-nav-ul">
+                <li id="themes-button">Themes</li>
+                <li id="fonts-button">Fonts</li>
+                <li id="fun-button">Fun calc</li>
+                <li id="about-button">About</li>
+            </ul>
+        </div>
+
+        <div id="apps" class="flexcenter hidden sub-apps-nav">
+            <ul id="sub-apps-nav-ul" class="sub-apps-nav-ul">
+                <li id="calc-button">Calc</li>
+                <li id="tic-button">Tic Tac Toe</li>
+                <li id="lords-button">Coming..</li>
+                <li id="pubg-button">Coming..</li>
+            </ul>
+        </div>
+        <!-- here the div.. open hogi setting button per click karte hi 
+ LINE NUMBER 44 SE 106👇👇👇-->
+        <div id="setting-main" class="setting-main flexcenter">
+
+            <div id="themes" class="setting-control hidden flexcenter">
+                <span class="one">=> Themes</span>
+                <ul>
+                    <li id="calc-themes1">Default</li>
+                    <li id="calc-themes2">Dark Theme</li>
+                    <li id="calc-themes3">Violet Theme</li>
+                    <li id="calc-themes4">Cyan Theme</li>
+                    <li id="calc-themes5">Green Theme</li>
+                    <li id="calc-themes6">Yellow Theme</li>
+                    <li id="calc-themes7">Blue Theme</li>
+                    <li id="calc-themes8">Orange Theme</li>
+                </ul>
+                <div class="calc-closebtn-control" id="calc-closebtn-control1">Close</div>
+            </div>
+            <div id="fonts" class="setting-control hidden flexcenter">
+                <span class="one">Fonts</span>
+                <ul>
+                    <li id="calc-fonts1">font type1</li>
+                    <li id="calc-fonts2">font type2</li>
+                    <li id="calc-fonts3">font type3</li>
+                    <li id="calc-fonts4">font type4</li>
+                    <li id="calc-fonts5">font type5</li>
+                    <li id="calc-fonts6">font type6</li>
+                </ul>
+                <div class="calc-closebtn-control" id="calc-closebtn-control2">Close</div>
+
+            </div>
+            <div id="fun" class="setting-control hidden flexcenter">
+                <span class="one">Fun calc</span>
+                <ul>
+                    <li id="calc-fun1">1. loding...</li>
+                    <li id="calc-fun2">2. loding...</li>
+                    <li id="calc-fun3">3. loding...</li>
+                    <li id="calc-fun4">4. loding...</li>
+                    <li id="calc-fun5">5. loding...</li>
+                    <li id="calc-fun6">6. loding...</li>
+                    <li id="calc-fun7">7. loding...</li>
+                    <li id="calc-fun8">8. loding...</li>
+                </ul>
+                <div class="calc-closebtn-control" id="calc-closebtn-control3">Close</div>
+            </div>
+
+            <div id="about" class="setting-control hidden flexcenter">
+                <span class="one">About</span>
+                <ul>
+                    <li id="calc-about1">1. coming...</li>
+                    <li id="calc-about2">2. coming...</li>
+                    <li id="calc-about3">3. coming...</li>
+                    <li id="calc-about4">4. coming...</li>
+                    <li id="calc-about5">5. coming...</li>
+                    <li id="calc-about6">6. coming...</li>
+                    <li id="calc-about7">7. coming...</li>
+                    <li id="calc-about8">8. coming...</li>
+                    <li id="calc-about9">9. coming...</li>
+                    <li id="calc-about10">10. coming...</li>
+                </ul>
+                <div class="calc-closebtn-control" id="calc-closebtn-control4">Close</div>
+            </div>
+        </div>
+        <!-- CHAARO YHA BAND HO RHE HAI 
+ LINE 44 SE 106  👆👆👆-->
+
+        <!-- here the div.. open hogi setting button per click karte hi 
+ LINE NUMBER 110 SE 173👇👇👇-->
+        <div id="apps-main" class="apps-main flexcenter">
+
+            <div id="calc" class="apps-control hidden flexcenter">
+                <span class="one">=> Confirmation</span>
+                are you sure you want ot open calculator application
+                <a href="index.html"><button class="openApp">Yes Open</button></a>
+                <div class="calc-closebtn-control" id="calc-closebtn-control5">No, Close</div>
+            </div>
+
+
+            <div id="tic" class="apps-control hidden flexcenter">
+                <span class="one">=> Confirmation</span>
+                are you sure you want ot open Tic Tac Toe application
+                <a href="tictactoe.html"><button class="openApp" id="openTic">Yes Open</button></a>
+                <div class="calc-closebtn-control" id="calc-closebtn-control6">No, Close</div>
+            </div>
+
+            <div id="lords" class="apps-control hidden flexcenter">
+                <span class="one">=> Coming Soon..1</span>
+                Hey user plz suggest us something Good.. 😄
+                <a href="form.html"><button class="openApp" id="openLords">Suggest</button></a>
+                <div class="calc-closebtn-control" id="calc-closebtn-control7">Close</div>
+            </div>
+            <div id="pubg" class="apps-control hidden flexcenter">
+                <span class="one">=> Coming Soon..2</span>
+                Hey user ! hum aapko update dete rahenge jaise hi koi update laate hai...<a href="form.html"><button
+                        class="openApp" id="openPubg">Next</button></a>
+                <div class="calc-closebtn-control" id="calc-closebtn-control8">Close</div>
+            </div>
+        </div>
+        <!-- CHAARO YHA BAND HO RHE HAI 
+LINE 44 SE 173 👆👆👆 -->
+    </div>
+    <main class="flexcenter calc-main">
+
+        <div class="tictac" id="tictac">
+            <div id="tictactoe">
+                <div class="player player1 flexcenter">Player1</div>
+                <div class="yourmove yourmove1 flexcenter" id="yourmove1">Apni chal chaley</div>
+                <div class="token token-circle flexcenter" id="token-circle">Circle</div>
+                <div class="result result1" id="result1"></div>
+                <div class="tdclass1">
+                    <div class="tdclass" id="td1">1</div>
+                    <div class="tdclass" id="td2">2</div>
+                    <div class="tdclass" id="td3">3</div>
+                </div>
+                <div class="tdclass1">
+                    <div class="tdclass" id="td4">4</div>
+                    <div class="tdclass" id="td5">5</div>
+                    <div class="tdclass" id="td6">6</div>
+                </div>
+                <div class="tdclass1">
+                    <div class="tdclass" id="td7">7</div>
+                    <div class="tdclass" id="td8">8</div>
+                    <div class="tdclass" id="td9">9</div>
+                </div>
+
+                <div class="result result2" id="result2"></div>
+                <div class="token token-cross flexcenter" id="token-cross">Cross</div>
+                <div class="yourmove yourmove2 flexcenter" id="yourmove2">Apni chal chaley</div>
+
+                <div class="player player2 flexcenter">Player2</div>
+            </div>
+        </div> <!-- class="tictac"  -->
+        
+    </main>
+    <div class="helpcircle" id="helpcircle"></div>
+    <div id="helpbox" class="helpbox">
+        <h1>Hi buddy</h1>
+        this is not our first time when we are trying to build a website. <br>
+
+        we already have build such type of great projects so many times , now this all just a game of left hand ..
+        Are
+        you even understanding what I am saying <br>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, exercitationem esse dignissimos nesciunt
+        labore
+        nostrum magni suscipit voluptates unde consequuntur beatae ipsa magnam eveniet numquam repellendus a
+        expedita.
+        Ut, mollitia ex culpa, et vero harum earum laborum ipsam debitis, neque voluptatum laboriosam!
+        Reprehenderit,
+        molestiae? Inventore, minima maxime at, magnam aliquam facilis dicta accusantium distinctio architecto
+        expedita
+        repellendus illum ipsa vitae voluptates. Obcaecati ea necessitatibus blanditiis fugit nihil esse autem
+        nobis,
+        ullam assumenda ipsum fugiat vel, sequi iste eum velit labore delectus libero ad. Fuga a, unde eos
+        distinctio
+        aut dolor modi quaerat laudantium officiis pariatur commodi perferendis perspiciatis cum atque iure illum
+        eius
+        voluptatum accusantium ut quasi, error, ducimus animi. Cumque quos eaque at facilis, iste consectetur animi
+        corrupti illo accusantium id facere sunt provident. Fugiat nobis aliquam aspernatur similique veritatis
+        nihil at
+        dolores necessitatibus ratione sit soluta voluptatum nemo fuga libero voluptas rem, laudantium illo cumque
+        magnam modi! In quia fugiat molestias magni sed qui praesentium voluptate exercitationem recusandae impedit.
+        Repudiandae deserunt quod explicabo odit iste culpa eius maxime ducimus vitae sint? Pariatur optio, dolore
+        voluptatem aspernatur cumque cum debitis obcaecati amet neque tenetur sit nobis eveniet ea doloremque totam
+        molestias, omnis sapiente id, nostrum aliquam! Architecto, illo ducimus?
+    </div>
+    
+
+
+    <script src="head-and-nav.js"></script>
+    <script src="tictactoe.js">
+    </script>
+
+</body>
+
+</html>

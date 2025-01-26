@@ -1,0 +1,137 @@
+
+
+/* about about starte from here
+before it 
+uper sirf aur sirf header ki preparations hai... */
+
+
+.about-main {
+    width: 100%;
+    height: 89vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #facada, #f7a8c4);
+    color: #424242;
+    padding: 20px;
+    overflow: auto;
+}
+
+.about-intro {
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    height: 30vh;
+    overflow: auto;
+}
+
+.about-intro-heading2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 55px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 4px 4px 3px rgb(148, 19, 41);
+}
+
+.about-intro>p {
+    font-size: 26px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    text-shadow: 4px 4px 12px rgb(141, 19, 39);
+
+}
+
+
+#li{
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 28px;
+    color: #880e4f;
+margin: 20px 0px 10px 0px;}
+
+.about-unique {
+    font-size: 19px;
+}
+
+.about-unique-heading2{
+    font-size: 22px;
+     color: #880e4f;
+      margin-bottom: 10px;
+}
+
+.about-fun-heading2{
+    font-size: 22px; color: #880e4f; margin-bottom: 10px;
+}
+.line-height{
+    line-height: 30px;
+}
+
+
+#hover-item {
+    transition: color 0.3s ease, transform 0.3s ease;
+    color: blue;
+}
+
+.go-back-button{
+    height: 50px;
+    border: #fdfbfb 4px solid;
+    background-color: rgb(14, 38, 247);
+    width: 50%;
+    align-self: center;
+    color: white;
+    position: static;
+    font-size: larger;
+    font-weight: 800;
+    border-radius: 15px;
+}
+
+
+
+/* important
+transitions
+and
+transformations
+by 
+chatgpt
+
+try to understand them later
+okay bye Radhe Radhe.. */
+
+
+/* Hover Effects for List Items */
+
+a:link,
+a:visited {
+    color: white;
+}
+
+
+/* Section Fade-in Effect */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Animate when visible */
+.section.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects for List Items */
+
+.hover-item:hover {
+    color: #ff6fa1;
+    transform: scale(1.1);}
+
+.about-thankyou {
+    text-align: center; margin-top: 20px;
+}
+
+.about-thankyou-para{
+    font-size: 16px; font-style: italic;
+}

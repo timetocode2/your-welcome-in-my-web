@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body id="about-body" class="about-body flexcenter">
+  <div class="about-main">
+
+    <!-- Introduction Section -->
+    <div class="about-intro flexcenter section fade-in ">
+      <h1 class="about-intro-heading2 ">Hi, I’m Himanshu Singh</h1>
+      <p>I’m someone who loves exploring new ideas, connecting with people, and sharing stories. Welcome to my little
+        corner on the web!
+      </p>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div class="about-hobby section slide-up">
+      <h2 class="about-hobby-heading2">
+        <ul>
+          <li id="li">My Hobbies</li>
+        </ul>
+      </h2>
+      <ul>
+        <li class="hover-item line-height">🎵 Music lover</li>
+        <li class="hover-item line-height">💻 Aspiring developer</li>
+        <li class="hover-item line-height">🌟 Dreamer</li>
+      </ul>
+    </div>
+
+    <!-- Unique Section -->
+    <div class="about-unique section fade-in">
+      <h2 class="about-unique-heading2">
+        <ul>
+          <li id="li">What Makes Me Unique?</li>
+      </h2>
+      <p>
+      <div id="hover-item" class="hover-item line-height">I believe in creating moments that matter,</div>
+      <div class="hover-item line-height"> whether it’s through coding, designing, or </div>
+      <div class="hover-item line-height">sharing a laugh with friends. Life is too short</div>
+      <div class="hover-item line-height">to not chase your dreams!</div>
+      </p>
+    </div>
+
+    <!-- Fun Facts Section -->
+    <div class="about-fun section slide-up">
+      <h2 class="about-fun-heading2">
+        <ul>
+          <li id="li">Fun Facts About Me</li>
+      </h2>
+      <ul style="list-style: none; padding: 0; font-size: 16px;">
+        <li class="hover-item line-height">🤓 I learned to solve a Rubik's Cube in 40 seconds!</li>
+        <li class="hover-item line-height">🎨 I’m obsessed with symmetry in everything!</li>
+        <li class="hover-item line-height">🎶 I believe every song tells a story—and I’m learning to create my own!</li>
+      </ul>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="about-thankyou fade-in">
+      <p class="about-thankyou-para">Thank you for taking the time to read about me. I’d love to know
+        more about you, too!</p>
+    </div>
+  </div>
+  <div class="go-back-button flexcenter"><a href="home.html">Go on Home Page</a></div>
+
+
+
+
+
+
+
+
+
+
+  <script>
+    // Add 'visible' class when sections come into view
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+
+</html>
