@@ -1,3 +1,11 @@
+.loginnn{
+    text-decoration: underline;
+    color: blue;
+}
+.loginnnn{
+    text-decoration: none;
+}
+
 .main-home-id {
     padding: 50px 10px 0px 10px;
     color: rgb(61, 45, 45);
@@ -66,7 +74,7 @@ p {
 
 
 #photo-frame {
-    width: 330px;
+    width: 366px;
     height: 219px;
     background: linear-gradient(to bottom, #ffd6e8, #ffb3d9);
     text-shadow: 2px 2px 5px rgb(221, 103, 103);
@@ -76,11 +84,12 @@ p {
 }
 
 .photo {
-    background-image: url("photo.jpg");
-    width: 300px;
+    background-image: url("Divya.jpg");
+    width: 336px;
     height: 189px;
     background-size: contain;
     box-sizing: content-box;
+    background-repeat: no-repeat;
     border: 3px solid rgb(240, 35, 69);
     border-radius: 12px;
 }
