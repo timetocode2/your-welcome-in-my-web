@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag, You Piece of Sh*t 😆</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #222, #555);
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #ff4747;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .burn {
+            font-size: 2rem;
+            background: #ff0000;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .burn:hover {
+            background: #ff4747;
+        }
+
+        .insult {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>F*** You Bro 🤣</h1>
+        <p>Anurag, tu seriously itna useless hai ki Ctrl+C bhi tujhe copy nahi karega 😭</p>
+        
+        <button class="burn" onclick="roastAnurag()">🔥 Roast Me 🔥</button>
+        <p id="insultMessage" class="insult"></p>
+    </div>
+
+    <script>
+        function roastAnurag() {
+            let roasts = [
+                "Bhai tu itna ugly hai ki mirror bhi 'connection lost' bol deta hai 🤣",
+                "Tu PUBG ka wo banda hai jo gun lootne se pehle mar jata hai 😆",
+                "Tere liye WiFi ka best plan hai – '404: Girlfriend Not Found' 🤡",
+                "Tu itna slow hai ki Google Chrome bhi 'Kill Page?' pooch leta hai 😭",
+                "Teri dating life aur Windows XP dono outdated hain 😂",
+                "Bro tu itna useless hai ki Calculator me bhi error aajayega 🤣"
+            ];
+            let randomRoast = roasts[Math.floor(Math.random() * roasts.length)];
+            document.getElementById("insultMessage").innerText = randomRoast;
+        }
+    </script>
+</body>
+</html>

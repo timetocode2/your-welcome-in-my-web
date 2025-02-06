@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For You ❤</title>
   <style>
+    * {
+      user-select: none;
+    }
     body {
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
@@ -110,22 +113,37 @@
     }
   </style>
 </head>
+
+
+
+
+
 <body>
   <div class="form-container">
     <h2>Aapka Swagat hai 😊</h2>
     <p class="flirty-message">You and Your suggestions matters a lot <br> Hey Log-in first for suggesting anything</p>
     <form id="crush-form">
-      <input type="text" id="name" placeholder="Aapka pyaara naam? 💕" required>
-      <input type="email" id="email" placeholder="Aapka email? 📧" required>
-      <textarea id="message" rows="4" placeholder="Mere vishay me kuch pyari baatein...✨ (not optinal, Necessary for login 😁) "></textarea>
+      <input type="text" id="name" placeholder="Aapka pyaara naam? 💕">
+      <input type="email" id="email" placeholder="Aapka email? 📧" >
+      <!-- <textarea id="message" rows="4" placeholder="Mere vishay me kuch pyari baatein...✨ (not optinal, Necessary for login 😁) "></textarea> -->
+<p>Or login with id & pass</p>
+<input type="text" id="login-id" placeholder="id ko yha likhe" required>
+<input type="text" id="login-pass" placeholder="aur yha pass darz kare" required>
       <button type="submit">Submit ❤</button>
     </form>
     <a href="index.html"><button id="home-button">Go to Home Page 🏠</button></a>
 </div>
-  
-  <div class="incomplete-message">
-    The page is incomplete.
+<div class="incomplete-message">Made with ❤ by <a href="https://www.instagram.com/mhmssingh/">Himanshu Singh</a>
+
   </div>
+
+
+
+
+
+
+
+
 
   <script>
     const form = document.getElementById('crush-form');
@@ -133,30 +151,31 @@
 
     // Form submit event
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
+      // Prevent form from refreshing the page
+
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
+      const loginId = document.getElementById('login-id').value;
+      const loginPass = document.getElementById('login-pass').value;
 
       if (name && email) {
-        alert(Thank you ${name}! Tumhara form receive ho gaya hai. 🌹\n\nAb tumhari baat ka intezaar rahega! 😍);
-      } else {
-        alert('Pehle form complete karo na! 😅');
+        alert(`Hey ${name}! you have a good name. 🌹\n\nBut login karne ke liye aapko id pass chahiye hoga 😍`);
       }
-    });
 
-    // Home page button event
-    homeButton.addEventListener('click', function () {
-      alert('Abhi home page available nahi hai! 😅');
-    });
-
-    // Flirty message hover effect
-    const message = document.querySelector('.flirty-message');
-    message.addEventListener('mouseover', () => {
-      message.textContent = "Wow! Tum toh bahut cute ho! 🥰";
-    });
-
-    message.addEventListener('mouseleave', () => {
-      message.textContent = "Form ko complete karo... shayad ek surprise mile! 😘";
+      if (loginId === "crush1" && loginPass === "crush123") {
+        alert(`Login Successful! 😍`);
+        window.location.href = "login-id/shreya.html";
+      } else if (loginId === "crush2" && loginPass === "crush123") {
+        alert(`Login Successful! 😍`);
+        window.location.href = "login-id/shreya2.html";
+      }else if (loginId === "Asrsingh" && loginPass === "chutiya") {
+        alert(`Login Successful! 😍`);
+        window.location.href = "login-id/anurag.html";
+      }
+      else {
+        alert(`Login Failed! 😔`);
+      }
+      e.preventDefault();
     });
   </script>
 </body>
