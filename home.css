@@ -11,13 +11,12 @@
     color: rgb(61, 45, 45);
     text-shadow: 2px 2px 5px rgb(241, 44, 44);
     font-family: 'Pacifico', cursive;
-    overflow: scroll important;
+    overflow: scroll;
 
 }
 
 .first-text {
     font-size: 40px;
-    /* text-shadow:7px 7px 3px black ; */
 }
 
 
@@ -195,6 +194,15 @@ animation: flip 3s linear  infinite alternate ;
     }
     
 }
+
+
+
+
+
+
+
+
+
 
 
 

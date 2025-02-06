@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="box.css">
+</head>
+<body>
+    <div class="helpcircle" id="helpcircle"></div>
+<div id="helpbox" class="helpbox flexcenter">
+    <h1>Hey User</h1>
+    <div class="help1" id="help1">
+        <span class="one1">
+            My name is navigator. </span>
+            <span class="one1">
+                BTW, you can also call me HelpCircle.</span> 
+                <span class="one1">
+                    I'm here just for you, </span>
+                    <span class="one1">
+                        to remind you that you have a magical touch.💕💖 </span>
+                        <span class="one1">
+                            So, when did you realize your hands have that magic? </span>
+                            <span class="one1">
+    If you still haven't, then make my web beautiful by just touching things and watch the magic happen!
+    and do you want to know how it happender</span>
+    </div>
+    <div class="help2" id="help2">This section isnt complete</div>
+    <div class="help1" id="help1">
+        <span class="one1">
+            My name is navigator. </span>
+            <span class="one1">
+                BTW, you can also call me HelpCircle.</span> 
+                <span class="one1">
+                    I'm here just for you, </span>
+                    <span class="one1">
+                        to remind you that you have a magical touch.💕💖 </span>
+                        <span class="one1">
+                            So, when did you realize your hands have that magic? </span>
+                            <span class="one1">
+    If you still haven't, then make my web beautiful by just touching things and watch the magic happen!
+    and do you want to know how it happender</span>
+    </div>
+    <div class="help2" id="help2">This section isnt complete</div>
+
+
+  
+</div>
+<script>
+    const helpcircle = document.getElementById("helpcircle");
+const helpbox = document.getElementById("helpbox");
+let isTranslated = false;
+
+helpcircle.addEventListener("click", () => {
+    const visibility = window.getComputedStyle(helpbox).visibility;
+    if (visibility === "hidden") { helpbox.style.visibility = "visible", document.querySelector("main").style.opacity = 0.1, document.querySelector("body").style.overflow = "hidden",helpbox.style.overflow = "scroll" } else { helpbox.style.visibility = "hidden", document.querySelector("main").style.opacity = 1 , document.querySelector("body").style.overflow = "auto"};
+
+    if (isTranslated === false) {
+        helpcircle.style.transform = " translateX(-40vw) translateY(-3vh )";
+        isTranslated = true;
+    } else {
+        isTranslated = false;
+        helpcircle.style.transform = "translateX(0) translateY(0)";
+    };
+
+});
+
+</script>
+
+</body>
+</html>

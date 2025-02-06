@@ -208,7 +208,8 @@ here the section is started for sub setting bar */
 }
 
 
-.calc-closebtn-control,.openApp2 {
+.calc-closebtn-control,
+.openApp2 {
     width: 40vw;
     font-size: 25px;
     height: 50px;
@@ -255,19 +256,20 @@ here the section is started for sub setting bar */
 #helpbox {
     height: 66vh;
     width: 78vw;
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-overflow: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
 
 }
 
 .helpbox {
     z-index: 10;
-    transition: 0.1s ease ;
+    transition: 0.1s ease;
     box-shadow: inset 5px 5px 7px rgba(255, 62, 158, 0.664);
-
+    overflow-x: scroll;
+    overflow-y: hidden;
     border: 5px white solid;
     border-radius: 10px;
     color: rgb(250, 18, 87);
@@ -275,25 +277,99 @@ overflow: scroll;
     padding: 20px;
     visibility: hidden;
     text-align: center;
-    background: linear-gradient(to bottom, #c2a3b1dc, #fdb3d8ce);
+    background: url(himanshu1.jpg);
+    background-position: 479px;
+    background-size: 634px;
 }
 
 .helpbox>h1 {
     color: #FFFFFF;
     text-shadow: 2px 2px 5px rgba(255, 62, 159, 0.8);
+}
+
+.help1 {
+    margin: 19px 0px 29px 0px;
+    line-height: 35px;
+    color: white;
 
 }
 
-.help1{
-    margin: 19px 0px;
+#help2 {
+    margin: 19px 0px 29px 0px;
+    line-height: 35px;
+
+}
+
+.one1 {
     font-size: 19px;
     line-height: 35px;
-}
-.help2{
-    height: 330vh;
-    width: 70vw;
-background-color: #c20c5e;
-color: black;
-font-weight: 700;
+    font-weight: 100;
+    margin-bottom: 5px;
 
+}
+
+.transparent-card {
+    padding: 2vw;
+    margin: 10px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    /* Gradient Transparent */
+    backdrop-filter: blur(2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.transparent-card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+    backdrop-filter: blur(100px);
+}
+
+.purple {
+    background-color: #c20c5e94;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.yellow {
+    background-color: #e6e94c94;
+    color: black;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.orange{
+    background-color: #ff7f0094;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 5px;
+}
+.blue{
+    background-color: #007bff94;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 5px;
+}
+.green{
+    background-color: #28a74594;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 5px;
+}
+.red{
+    background-color: #dc354594;
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+    padding: 5px;
 }

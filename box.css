@@ -1,0 +1,75 @@
+#helpcircle {
+    border: 4px white solid;
+    box-shadow: 3px 3px 3px black;
+    background: url(himanshu1.jpg);
+    background-size: contain;
+    width: 69px;
+    height: 69px;
+    border-radius: 100%;
+    position: fixed;
+    right: 1vh;
+    bottom: 3vh;
+    z-index: 100;
+    transition: 0.3s;
+    animation: var(--animated-world);
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+
+#helpbox {
+    height: 66vh;
+    width: 78vw;
+position: absolute; 
+ top: 50%;
+left: 50%; 
+  transform: translate(-50%, -50%);
+ overflow: hidden;
+
+
+transform: translate(-50%, -50%);
+
+}
+
+.helpbox {
+    transition: 0.1s ease ;
+    box-shadow: inset 5px 5px 7px rgba(255, 62, 158, 0.664);
+
+    border: 5px white solid;
+    border-radius: 10px;
+    color: rgb(250, 18, 87);
+    font-size: 25px;
+    padding: 20px;
+    visibility: hidden;
+    text-align: center;
+    background: linear-gradient(to bottom, #c2a3b1dc, #fdb3d8ce);
+}
+
+.helpbox>h1 {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 5px rgba(255, 62, 159, 0.8);
+
+}
+
+.help1{
+    margin: 19px 0px;
+    font-size: 19px;
+    line-height: 35px;
+    border: 5px white solid;
+
+}
+.help2{
+    height: 130vh;
+    width: 70vw;
+background-color: #c20c5e;
+color: black;
+font-weight: 700;
+border: 5px white solid;
+margin-bottom: 10px;
+
+}
