@@ -369,7 +369,11 @@ let isTranslated = false;
 
 helpcircle.addEventListener("click", () => {
     const visibility = window.getComputedStyle(helpbox).visibility;
-    if (visibility === "hidden") { helpbox.style.visibility = "visible", document.querySelector("main").style.opacity = 0.1, document.querySelector(".nouse").style.height = "110px" ,document.querySelector(".nouse").style.overflow = "hidden"} else { helpbox.style.visibility = "hidden", document.querySelector("main").style.opacity = 1 , document.querySelector(".nouse").style.overflow = "auto", document.querySelector(".nouse").style.height = "auto" };
+    if (visibility === "hidden") { helpbox.style.visibility = "visible", document.querySelector("main").style.height = "110px" ,document.querySelector("main").style.overflow = "hidden",
+        helpbox.style.animation= "zoom 0.9s linear 1 normal forwards",
+        document.querySelector(".transparent-card").style.animation= "zoom2 0.9s linear 1 normal forwards"
+ 
+    } else { helpbox.style.visibility = "hidden", document.querySelector("main").style.overflow = "auto", document.querySelector("main").style.height = "auto" ,helpbox.style.animation="none" };
 
     if (isTranslated === false) {
         helpcircle.style.transform = " translateX(-40vw) translateY(-3vh )";

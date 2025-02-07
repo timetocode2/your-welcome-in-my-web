@@ -1,26 +1,32 @@
+.calc-main {
+    width: 100%;
+    position: relative;
+    top: 168px;
+    height: auto;
+    background: linear-gradient(to bottom, #ffb3d9, #ff7eb3);
+
+}
+
 .calculator {
     background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
     position: relative;
-    top: 80px;
     width: 100%;
 }
 
 
 .calc-scrn {
-    background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
-    height: 96vh;
+    /* background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197)); */
+    height: 32vh;
     position: relative;
     top: -8vh;
     line-height: 20px;
-    border: white solid;
-    border-width: 0px 4px 4px 4px;
     width: 100%;
     text-shadow: none;
 }
 
 .calc-scrn>span {
     display: inline-block;
-    margin-top: 2vh;
+    margin-top: 1vh;
     width: 90%;
     font-size: 15px;
     color: white;
@@ -31,11 +37,12 @@
 }
 
 .calc-scrn2 {
+    display: flex;
     height: 55vw;
     width: 80vw;
     border: 4px white solid;
     background: linear-gradient(to bottom, #ffb3d9, #ff7eb3);
-    margin: 2vh auto 5vh auto;
+    margin: 1vh auto 0vh auto;
     box-shadow: inset 7px 7px 3px rgba(0, 0, 0, 0.678);
     flex-wrap: wrap;
     align-content: center;
@@ -48,20 +55,18 @@
     text-shadow: #333333b2 9px 9px 3px;
 }
 
-.calc-scrn2-div {
-    font-size: 114vh;
-    text-shadow: 7px 7px 8px rgba(0, 0, 0, 0.5);
-}
+
 
 .calc-keypad {
     height: 50vh;
     background: linear-gradient(to bottom, #ffb3d9, #ff7eb3);
     box-shadow: inset 7px 7px 3px rgba(0, 0, 0, 0.678);
-    border:4px white solid;
-margin-left: auto;    display: grid;
-margin-right: auto;
-    grid-template-columns: 21vw 21vw 21vw 21vw;
-    grid-template-rows:  15vw 15vw 15vw 15vw 15vw;
+    border: 4px white solid;
+    margin-left: auto;
+    display: grid;
+    margin-right: auto;
+    grid-template-columns: 21vmin 21vmin 21vmin 21vmin;
+    grid-template-rows: 15vmin 15vmin 15vmin 15vmin 15vmin;
     width: 95%;
     row-gap: 2vw;
     column-gap: 2vw;
@@ -74,7 +79,7 @@ margin-right: auto;
     width: 90%;
     box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.678);
     height: 90%;
-    font-size: 3vh;
+    font-size: 3vmax;
     background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
 
 }
@@ -89,3 +94,97 @@ margin-right: auto;
 
 
 
+
+
+
+
+
+
+
+
+@media screen and (orientation: landscape) {
+
+    .calc-main {
+        top: 60px;
+    }
+
+    .calc-scrn {
+        top: 60px;
+
+        width: 35vw;
+        height: 69vh;
+        position: fixed;
+        left: 0vw;
+
+    }
+
+    .calc-scrn>span {
+        width: 35%;
+        position: fixed;
+        left: 0vw;
+        top: 76px;
+        color: black;
+z-index: 2;
+
+    }
+
+    .calc-scrn2 {
+        width: 35vw;
+        height: 68vh;
+        margin: 0;
+        position: fixed;
+        left: 0vw;
+        box-shadow: none;
+
+
+    }
+
+    .calc-keypad {
+        height: 68vh;
+        width: 45%;
+        grid-template-columns: 19vmin 19vmin 19vmin 19vmin 19vmin;
+        grid-template-rows: 14vmin 14vmin 14vmin 14vmin;
+        position: fixed;
+        left: 35vw;
+        row-gap: 4px;
+        column-gap: 7px;
+        box-shadow: none;
+overflow: auto;
+    }
+
+    .calc-key{
+        box-shadow: none;
+
+    }
+
+
+.sub-setting-nav,
+.sub-apps-nav {
+background: none;border: none;
+box-shadow: none;
+
+}
+
+.calc-side-div9005{
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 20%;
+    height: 68vh;
+    background: linear-gradient(to bottom, #ffb3d9, #ff7eb3);
+border: white 4px solid;
+}
+}
+
+@media screen and (max-width:1000px){
+    .header1{
+        box-shadow: none;
+        top: 6px;
+    }
+    .nav1{
+        height: 53px;
+        top: 6px;
+        box-shadow: none;
+    }
+    
+}

@@ -1,0 +1,291 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didi Ka Page 😈</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: yellow;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .insult-box {
+            font-size: 1.6rem;
+            background: #ffeb3b;
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .insult-box:hover {
+            background: #fdd835;
+        }
+
+        .insult-container {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: black;
+            font-weight: bold;
+        }
+
+        .love {
+            margin-top: 40px;
+            font-size: 1.6rem;
+            color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👿 Duniya Ki Sabse Badi Museebat – "Behn" 🤣</h1>
+        <p>घर में अगर कोई चीज़ गायब हो, तो सबसे पहला शक *इसी पर* जाता है! 😆</p>
+        
+        <button class="insult-box" onclick="roastSister()">🔥 Iske Sath Beizzati Shuru Karo 🔥</button>
+        
+        <div id="insultContainer" class="insult-container"></div>
+
+        <h2>😤 Behn Ka "Talent" 😤</h2>
+        <p>– *घर की हर चीज़ पे हक जताना* 🎭</p>
+        <p>– *भाई की चीज़ें उठा लेना, फिर भाई को ही डांटना* 🏆</p>
+        <p>– *बिना वजह रोकर मम्मी-पापा को भड़काना* 🤡</p>
+        
+        <h2 class="love">💖 Lekin Phir Bhi… Behn To Behn Hai 💖</h2>
+        <p>(Aur jab future me iska pati pareshan hoga, tab hasi aayegi! 🤣)</p>
+    </div>
+
+    <script>
+        let insults = [
+            "Iska logic इतना तगड़ा होता है कि NASA वाले भी समझ नहीं पाते! 🚀",
+            "कॉल इतनी लंबी करती है कि Phone Company वाले भी परेशान हो जाएं! 📞",
+            "हर सेल्फी में ऐसा pose मारती है कि कैमरा खुद बंद हो जाए! 🤳",
+            "गॉसिप में इतना expert है कि न्यूज रिपोर्टर भी फेल हैं! 📰",
+            "बचपन में लड़ती थी, अब भी लड़ती है, और शादी के बाद भी लड़ने वाली है! 😂",
+            "Exam ke time इतना डरी हुई रहती है कि पेपर भी sharma jaye! 📚"
+        ];
+        
+        let index = 0;
+        
+        function roastSister() {
+            if (index < insults.length) {
+                let newInsult = document.createElement("p");
+                newInsult.innerText = insults[index];
+                document.getElementById("insultContainer").appendChild(newInsult);
+                index++;
+            } else {
+                let finalInsult = document.createElement("p");
+                finalInsult.innerText = "Bhai ab bas bhi kar… warna yeh phone tod degi! 😂";
+                document.getElementById("insultContainer").appendChild(finalInsult);
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annoying Little Sister Portal</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff9ff3, #f368e0);
+            font-family: 'Comic Sans MS', cursive;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .floating-emoji {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            color: #e84393;
+            text-align: center;
+            text-shadow: 2px 2px #ffcccc;
+        }
+
+        .sister-facts {
+            border: 3px dashed #e84393;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: #fff9ff;
+        }
+
+        button {
+            background: #e84393;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin: 0.5rem;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #ff7675;
+        }
+
+        .secret-section {
+            display: none;
+            margin-top: 2rem;
+        }
+
+        .glitch {
+            animation: glitch 1s infinite;
+            color: #e84393;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-emoji" style="left:10%">👯♀</div>
+    <div class="floating-emoji" style="right:15%">🎮</div>
+    <div class="floating-emoji" style="left:20%; top:30%">🍕</div>
+
+    <div class="container">
+        <h1 class="glitch">WARNING: SISTER ZONE</h1>
+        
+        <div class="sister-facts">
+            <h3>🔍 Top Secrets:</h3>
+            <ul>
+                <li>Professional Snack Thief 🍫</li>
+                <li>Phone Addict Level: Expert 📱</li>
+                <li>Master of Annoying TikTok Dances 💃</li>
+            </ul>
+        </div>
+
+        <button onclick="revealMessage()">Click If You're Cool</button>
+        <button onclick="toggleRoastMode()">Roast Mode 🔥</button>
+
+        <div id="secretMessage" class="secret-section">
+            <h3>🤫 Secret Sister Message:</h3>
+            <p>Despite you being annoying 24/7...</p>
+            <p>You're kinda awesome sometimes 😉</p>
+            <p>(But I'll never admit it in real life!)</p>
+        </div>
+
+        <div id="roastSection" class="secret-section">
+            <h3>🔥 Roast Time:</h3>
+            <p>Reasons you're the worst:</p>
+            <ul>
+                <li>You still don't know how to knock 🚪</li>
+                <li>Your memes are cringe AF 😬</li>
+                <li>You owe me ₹1000 for snacks 🤑</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let roastMode = false;
+        
+        function revealMessage() {
+            document.getElementById('secretMessage').style.display = 'block';
+            setTimeout(() => {
+                alert("Just kidding... you're okay I guess 😜");
+            }, 1000);
+        }
+
+        function toggleRoastMode() {
+            roastMode = !roastMode;
+            const roastSection = document.getElementById('roastSection');
+            const buttons = document.querySelectorAll('button');
+            
+            if(roastMode) {
+                document.body.style.background = 'linear-gradient(45deg, #ff7675, #d63031)';
+                roastSection.style.display = 'block';
+                buttons.forEach(btn => {
+                    btn.style.background = '#d63031';
+                });
+            } else {
+                document.body.style.background = 'linear-gradient(45deg, #ff9ff3, #f368e0)';
+                roastSection.style.display = 'none';
+                buttons.forEach(btn => {
+                    btn.style.background = '#e84393';
+                });
+            }
+        }
+
+        // Add random emoji explosion on click
+        document.addEventListener('click', function(e) {
+            const emojis = ['💅', '👀', '😂', '🙄', '🍕', '🎮', '💩'];
+            const emoji = document.createElement('div');
+            emoji.className = 'floating-emoji';
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.style.left = e.pageX + 'px';
+            emoji.style.top = e.pageY + 'px';
+            document.body.appendChild(emoji);
+            
+            setTimeout(() => {
+                emoji.remove();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

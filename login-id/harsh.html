@@ -1,0 +1,131 @@
+<!-- anurag.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bro Zone</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            border: 3px solid #00ff00;
+            margin: 2rem;
+            padding: 1rem;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .glitch {
+            animation: glitch 1s infinite;
+            text-shadow: 2px 2px #ff00ff;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+
+        .password-list {
+            text-align: left;
+            margin: 2rem;
+            padding: 1rem;
+            border: 2px dashed #00ff00;
+        }
+
+        button {
+            background: #00ff00;
+            color: #1a1a1a;
+            border: none;
+            padding: 1rem 2rem;
+            margin: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #ff00ff;
+        }
+
+        .roast {
+            color: #ff00ff;
+            font-size: 1.2rem;
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid #ff00ff;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glitch">⚠ BRO ACCESS GRANTED ⚠</h1>
+        
+        <div class="password-list">
+            <h2>Top Secret Logins:</h2>
+            <p>Crush ID: Sh***singh9201</p>
+
+            <p>Bro ID: chalajadkboss</p>
+        </div>
+
+        <button onclick="showRoast()">Click for Special Message</button>
+        <button onclick="matrixEffect()">Activate Bro Mode</button>
+
+        <div id="roast1" class="roast">
+            <p>Listen here you little 💩:</p>
+            <p>F*** you bro! 😂</p>
+            <p>(Bhai maan na maan per hai tu bada bala... C++)</p>
+        </div>
+
+        <div id="roast2" class="roast">
+            <p>Reasons you're awesome:</p>
+            <ul>
+                <li>Your meme game is strong 💪</li>
+                <li>Insult hone ke baad bhi  padh skta hai 🫡👍</li>
+                <li>bro is best chutiya in this world 😂</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let roastCount = 0;
+        
+        function showRoast() {
+            const roasts = document.querySelectorAll('.roast');
+            roasts[roastCount % 2].style.display = 'block';
+            roastCount++;
+            
+            if(roastCount === 3) {
+                alert("Okay enough roasting, pizza on me? 🍕");
+            }
+        }
+
+        function matrixEffect() {
+            document.body.style.background = '#000';
+            document.body.innerHTML += `
+                <div style="position:fixed; top:0; left:0; color:#00ff00; z-index:-1" id="matrix"></div>
+            `;
+            
+            // Matrix rain effect
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()";
+            const matrix = document.getElementById('matrix');
+            
+            setInterval(() => {
+                matrix.innerHTML = chars[Math.floor(Math.random() * chars.length)];
+            }, 150);
+        }
+    </script>
+</body>
+</html>

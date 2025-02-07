@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitaji - My Superhero</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #2c0b0e, #400909);
+            color: #fff;
+            font-family: 'Cambria', serif;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .border-design {
+            border: 3px solid #FFD700;
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .diya {
+            width: 60px;
+            position: absolute;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            color: #FFD700;
+            text-align: center;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .message {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 2rem 0;
+        }
+
+        .quote {
+            font-style: italic;
+            border-left: 3px solid #FFD700;
+            padding-left: 1rem;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+        }
+
+        button {
+            background: #FFD700;
+            color: #2c0b0e;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            display: block;
+            margin: 2rem auto;
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: #ffeb3b;
+        }
+
+        .hidden-message {
+            display: none;
+            text-align: center;
+            font-size: 1.3rem;
+            color: #FFD700;
+            margin-top: 2rem;
+        }
+
+        .flowers {
+            position: absolute;
+            width: 100px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://www.freeiconspng.com/uploads/diya-png-5.png" class="diya" style="left: 10%; top: 20%">
+    <img src="https://www.freeiconspng.com/uploads/diya-png-5.png" class="diya" style="right: 10%; top: 60%">
+
+    <div class="container">
+        <div class="border-design">
+            <h1>🙏 पिताजी को समर्पित 🙏</h1>
+            
+            <div class="message">
+                <p>आपके संघर्षों का हर निशान,<br>
+                मेरे जीवन का है आधार बन गया।<br>
+                छोटी-छोटी सीख आपकी,<br>
+                मेरे लिए गीता का ज्ञान बन गया।</p>
+
+                <div class="quote">
+                    "पिता का आशीर्वाद ही संतान के लिए सबसे बड़ा सुरक्षा कवच होता है"
+                </div>
+
+                <p>Thank you for being my:<br>
+                - First Teacher 🎓<br>
+                - Forever Guide 🧭<br>
+                - Silent Supporter 🤫<br>
+                - Ultimate Hero 🦸</p>
+            </div>
+
+            <button onclick="revealBlessing()">आशीर्वाद pradan kare</button>
+            <div id="blessing" class="hidden-message">
+                🪔 आपको दीर्घायु एवं स्वस्थ जीवन का आशीर्वाद 🪔
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function revealBlessing() {
+            document.getElementById('blessing').style.display = 'block';
+            const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2570/2570-preview.mp3');
+            audio.play();
+            setTimeout(() => {
+                alert("Aashirvaad dene ke liye aapka dhanyavad \n tatha aap bhi हमेशा खुश रहें पिताजी! 🙏");
+            }, 800);
+        }
+
+        // Add floating flowers
+        function createFlowers() {
+            const positions = [
+                { top: '5%', left: '5%' },
+                { top: '15%', right: '5%' },
+                { bottom: '10%', left: '20%' },
+                { bottom: '15%', right: '15%' }
+            ];
+
+            positions.forEach(pos => {
+                const flower = document.createElement('img');
+                flower.src = 'https://www.freeiconspng.com/uploads/flower-png-33.png';
+                flower.className = 'flowers';
+                Object.assign(flower.style, pos);
+                document.body.appendChild(flower);
+            });
+        }
+
+        createFlowers();
+    </script>
+</body>
+</html>

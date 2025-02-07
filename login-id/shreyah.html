@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Shreya ❤</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .heart {
+            font-size: 50px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); color: white; }
+            50% { transform: scale(1.3); color: red; }
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            background: #ff3e6b;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background: #ff1f55;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .stars span {
+            font-size: 2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .stars span:hover, .stars span.selected {
+            color: gold;
+        }
+
+        .mcq label {
+            display: block;
+            margin: 5px 0;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .personal-question {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey Shreya! ❤</h1>
+        <p>Tumhari is duniya me entry ho chuki hai! 🌍✨</p>
+        <p>Ab tumhe ek secret reveal karna hai! 💕</p>
+        <div class="heart">❤</div>
+        <button class="btn" onclick="showSecret()">Click to Reveal 😏</button>
+        <p id="secretMessage" class="hidden">Mujhe tumse kuch kehna hai... Lekin pehle ek chai toh pila do? ☕😜</p>
+
+        <!-- ⭐⭐⭐⭐⭐ Star Rating -->
+        <div class="stars">
+            <p>Rate your experience: ⭐⭐⭐⭐⭐</p>
+            <span onclick="rate(1)">⭐</span>
+            <span onclick="rate(2)">⭐</span>
+            <span onclick="rate(3)">⭐</span>
+            <span onclick="rate(4)">⭐</span>
+            <span onclick="rate(5)">⭐</span>
+            <p id="ratingMessage"></p>
+        </div>
+
+        <!-- MCQ -->
+        <div class="mcq">
+            <p>What do you think? Developer is:-</p>
+            <label><input type="radio" name="developer" onclick="checkMCQ('A')"> A. Handsome</label>
+            <label><input type="radio" name="developer" onclick="checkMCQ('B')"> B. Smart + Handsome</label>
+            <label><input type="radio" name="developer" onclick="checkMCQ('C')"> C. Delusional 😅😅</label>
+            <label><input type="radio" name="developer" onclick="checkMCQ('D')"> D. Smart + Handsome + 😍</label>
+            <label><input type="radio" name="developer" onclick="checkMCQ('E')"> E. Only Above Average</label>
+            <p id="mcqMessage"></p>
+        </div>
+
+        <!-- Personal Questions -->
+        <div class="personal-question">
+            <p>Okay last question! What's your ideal date?</p>
+            <button class="btn" onclick="askDate()">Tell me 😉</button>
+            <p id="dateMessage" class="hidden"></p>
+        </div>
+    </div>
+
+    <script>
+        function showSecret() {
+            document.getElementById("secretMessage").classList.remove("hidden");
+        }
+
+        function rate(star) {
+            if (star < 5) {
+                document.getElementById("ratingMessage").innerText = "Dear! You are only allowed to rate 5 stars 😉";
+            } else {
+                document.getElementById("ratingMessage").innerText = "Uff 🙈 5 stars! You have great taste 😏";
+            }
+        }
+
+        function checkMCQ(option) {
+            let msg = "";
+            if (option === 'B' || option === 'D') {
+                msg = "Correct answer! You have great observation skills 😏";
+            } else {
+                msg = "No no no! You are only allowed to choose B or D 😅";
+            }
+            document.getElementById("mcqMessage").innerText = msg;
+        }
+
+        function askDate() {
+            let options = [
+                "A candlelight dinner 🍷✨",
+                "A long drive 🚗💨",
+                "Netflix & Pizza 🍕🎬",
+                "A surprise adventure 😍🔥",
+                "Oh wait, are we planning a date? 🙈😜"
+            ];
+            let randomOption = options[Math.floor(Math.random() * options.length)];
+            document.getElementById("dateMessage").innerText = randomOption;
+            document.getElementById("dateMessage").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>

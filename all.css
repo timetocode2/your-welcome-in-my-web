@@ -132,8 +132,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* transform: translateX(500px); */
-    /* transition: opacity 0.3s ease, transform 0.4s ease-out; */
 }
 
 .hidden {
@@ -144,7 +142,6 @@ main {
 #apps.sub-nav-show2 {
     visibility: visible;
     opacity: 1;
-    /* transform: translateX(0px); */
 }
 
 
@@ -266,7 +263,6 @@ here the section is started for sub setting bar */
 
 .helpbox {
     z-index: 10;
-    transition: 0.1s ease;
     box-shadow: inset 5px 5px 7px rgba(255, 62, 158, 0.664);
     overflow-x: scroll;
     overflow-y: hidden;
@@ -282,9 +278,34 @@ here the section is started for sub setting bar */
     background-size: 634px;
 }
 
+@keyframes zoom {
+    0% {
+        width: 0%;
+        height: 0%;
+    }
+
+    100% {
+        width: 80%;
+        height: 70%;
+    }
+}
+
+@keyframes zoom2 {
+    0% {
+        width: 0%;
+        height: 0%;
+    }
+
+    100% {
+        width: 95%;
+        height: 70%;
+    }
+}
+
 .helpbox>h1 {
     color: #FFFFFF;
     text-shadow: 2px 2px 5px rgba(255, 62, 159, 0.8);
+
 }
 
 .help1 {
@@ -312,14 +333,12 @@ here the section is started for sub setting bar */
     padding: 2vw;
     margin: 10px;
     border-radius: 15px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-    /* Gradient Transparent */
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); */
     backdrop-filter: blur(2px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease-in-out;
 }
 
 /* Hover Effect */
@@ -345,31 +364,89 @@ here the section is started for sub setting bar */
     padding: 5px;
 }
 
-.orange{
+.orange {
     background-color: #ff7f0094;
     color: white;
     font-weight: 700;
     border-radius: 15px;
     padding: 5px;
 }
-.blue{
+
+.blue {
     background-color: #007bff94;
     color: white;
     font-weight: 700;
     border-radius: 15px;
     padding: 5px;
 }
-.green{
+
+.green {
     background-color: #28a74594;
     color: white;
     font-weight: 700;
     border-radius: 15px;
     padding: 5px;
 }
-.red{
+
+.red {
     background-color: #dc354594;
     color: white;
     font-weight: 700;
     border-radius: 15px;
     padding: 5px;
 }
+
+
+
+
+
+
+
+
+
+@media screen and (orientation: landscape) {
+    .header1 {
+        width: 50%;
+        box-shadow: 0px 9px 3px rgba(0, 0, 0, 0.575);
+        
+        border-width: 4px 4px 4px 4px;
+
+
+    }
+
+    .nav1 {
+        width: 50%;
+        position: fixed;
+        left: 50%;
+        top: 0;
+        height: 50px;
+        border-width: 4px 4px 4px 4px;
+        box-shadow: 2px 9px 3px rgba(0, 0, 0, 0.575);
+
+    }
+
+    main{
+        top: 0;
+    }
+    
+
+.sub-setting-nav,
+.sub-apps-nav {
+    z-index: 100;
+    top: 51px;
+    right: 0;
+    width: 20%;
+    height: 80%;
+    flex-direction: column;
+}
+.sub-setting-nav-ul,
+.sub-apps-nav-ul {
+display: flex;
+flex-direction: column;
+gap: 5vh;
+}
+
+
+
+}
+

@@ -157,6 +157,7 @@
       const email = document.getElementById('email').value;
       const loginId = document.getElementById('login-id').value;
       const loginPass = document.getElementById('login-pass').value;
+      e.preventDefault();
 
       if (name && email) {
         alert(`Hey ${name}! you have a good name. 🌹\n\nBut login karne ke liye aapko id pass chahiye hoga 😍`);
@@ -165,17 +166,33 @@
       if (loginId === "Shreyasingh9201" && loginPass === "Shreya@123") {
         alert(`Dear Shrya ! You have successfully logged in... 😍`);
         window.location.href = "login-id/shreya.html";
-      } else if (loginId === "Shreyasingh123" && loginPass === "Shreya@9201") {
+      }
+       else if (loginId === "Shreyasingh123" && loginPass === "Shreya@9201") {
         alert(`Login Successful! 😍`);
         window.location.href = "login-id/shreya2.html";
-      }else if (loginId === "Asrsingh" && loginPass === "chutiya") {
+      }
+
+
+      else if (loginId === "Asrsingh" && loginPass === "chutiya") {
         alert(`Login Successful! 😍`);
         window.location.href = "login-id/anurag.html";
       }
+      else if (loginId === "Satyapalsingh123" && loginPass === "NEE12LAM3") {
+        alert(`Login Successful! 😍`);
+        window.location.href = "login-id/pitaji.html";
+      }
+      else if (loginId === "Devanshi7518singh" && loginPass === "Superhullu") {
+        alert(`Login Successful! 😍`);
+        window.location.href = "login-id/divya.html";
+      }
+      else if (loginId === "Harsh_thakur" && loginPass === "Chutiya") {
+        alert(`Login Successful! 😍`);
+        window.location.href = "login-id/harsh.html";
+      }
+
       else {
         alert(`Login Failed! 😔`);
       }
-      e.preventDefault();
     });
   </script>
 </body>
