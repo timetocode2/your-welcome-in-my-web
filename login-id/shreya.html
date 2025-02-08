@@ -5,146 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surprise!</title>
-    <style>
-        body {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-            min-height: 100vh;
-            font-family: 'Brush Script MT', cursive;
-            margin: 0;
-            overflow-x: hidden;
-        }
-
-        .envelope {
-            position: relative;
-            width: 300px;
-            height: 200px;
-            margin: 2rem auto;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .letter {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: 2rem auto;
-            transform: scale(0);
-            animation: reveal 1s forwards 0.5s;
-            position: relative;
-        }
-        .card1{
-            background: linear-gradient(135deg, rgb(90, 248, 130), rgba(39, 61, 255, 0.356), rgba(255, 0, 0, 0.705));
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.329);
-            max-width: 300px;
-            margin: 2rem auto;
-            transform: scale(0);
-            animation: reveal 1s forwards 0.5s;
-            position: relative;
-        }
-
-        @keyframes reveal {
-            to { transform: scale(1); }
-        }
-
-        h1 {
-            color: #ff6b6b;
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .message {
-            line-height: 1.6;
-            font-size: 1.2rem;
-            text-align: center;
-        }
-
-.heart123{ width:100%;
-  margin-bottom: 100px;
-}
-
-        .hearts {
-            position: absolute;
-            font-size: 24px;
-            animation: float 3s infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .secret-button {
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            margin: 1rem auto;
-            display: block;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .secret-button:hover {
-            transform: scale(1.1);
-        }
-    </style>
+      <link rel="stylesheet" href="shreya.css"> 
 </head>
 <body>
     <div class="letter">
-        <h1>To Shreya 🌸</h1>
+        <h1>To Shreya ðŸŒ¸</h1>
         <div class="message">
             <p>I was going to write you a love letter...</p>
             <p>But then I realized every word in the dictionary<br>
-            falls short of describing how amazing you are 💫</p>
-            <p>Your smile is my favorite notification 🔔<br>
-            Your voice is my favorite melody 🎶<br>
-            Your presence is my favorite place to be 🏠</p>
+            falls short of describing how amazing you are ðŸ’«</p>
+            <p>Your smile is my favorite notification ðŸ””<br>
+            Your voice is my favorite melody ðŸŽ¶<br>
+            Your presence is my favorite place to be ðŸ </p>
             <p>This page took me 1000 lines of code to make,<br>
-            But you only took 1 glance to capture my heart ❤</p>
+            But you only took 1 glance to capture my heart â¤</p>
         </div>
         <button class="secret-button" onclick="showSurprise()">Click for Magic</button>
     </div>
-<div class="heart123"></div>
-<div class="card1">
-    <div class="mcq">
+  <div class="heart123"></div>
+<div class="card">
+  <div class="card1">
+      <div class="mcq">
         <p>What do you think? Developer is:-</p>
         <label><input type="radio" name="developer" onclick="checkMCQ('A')"> A. Only Above Average</label><br>
         <label><input type="radio" name="developer" onclick="checkMCQ('B')"> B. A Handsome Guy</label><br>
         <label><input type="radio" name="developer" onclick="checkMCQ('C')"> C. Smart + Handsome</label><br>
-        <label><input type="radio" name="developer" onclick="checkMCQ('D')"> D. Delusional 😅😅</label><br>
-        <label><input type="radio" name="developer" onclick="checkMCQ('E')"> E. Smart + Handsome + 😍</label>
-        <p id="mcqMessage"></p>
+        <label><input type="radio" name="developer" onclick="checkMCQ('D')"> D. Delusional ðŸ˜…ðŸ˜…</label><br>
+        <label><input type="radio" name="developer" onclick="checkMCQ('E')"> E. Smart + Handsome + ðŸ˜</label>
+      </div>
+      <div class="mcq-result" id="mcqMessage"></div>
     </div>
+  <div class="card2">
+      <div class="mcq">
+        <p>How much star will you rate ..?ðŸ˜€</p>
+        <label><input type="radio" name="rate" onclick="rate('1')"> A. Only One </label><br>
+        <label><input type="radio" name="rate" onclick="rate('2')"> B. Obly Two</label><br>
+        <label><input type="radio" name="rate" onclick="rate('3')"> C. Only Three</label><br>
+        <label><input type="radio" name="rate" onclick="rate('4')"> D. Only Four</label><br>
+        <label><input type="radio" name="rate" onclick="rate('5')"> E. Five out of Five ðŸ¤—</label>
+      </div>
+      <div class="mcq-result" id="ratingMessage">
+      </div>
+  </div>
 </div>
-    <script>
-        function createFloatingHearts() {
-            const container = document.querySelector(".heart123");
-            for (let i = 0; i < 50; i++) {
-                const heart = document.createElement('div');
-                heart.className = 'hearts';
-                heart.innerHTML = '❤';
-                heart.style.left = Math.random() * 100 + 'vw';
-                heart.style.animationDelay = Math.random() * 3 + 's';
-                container.appendChild(heart);
-            }
-        }
-
-        function showSurprise() {
-            alert("Surprise! You've hacked into my heart 💘");
-            createFloatingHearts();
-            document.querySelector('.secret-button').textContent = "💖 Mission Accomplished 💖";
-        }
-
-        // Initial hearts
-        createFloatingHearts();
-
-
-    </script>
+  
+  
+  
+        <script src="shreya.js"></script>
 </body>
 </html>
