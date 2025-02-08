@@ -63,8 +63,12 @@
             text-align: center;
         }
 
+.heart123{ width:100%;
+  margin-bottom: 100px;
+}
+
         .hearts {
-            position: fixed;
+            position: absolute;
             font-size: 24px;
             animation: float 3s infinite;
         }
@@ -106,6 +110,7 @@
         </div>
         <button class="secret-button" onclick="showSurprise()">Click for Magic</button>
     </div>
+<div class="heart123"></div>
 <div class="card1">
     <div class="mcq">
         <p>What do you think? Developer is:-</p>
@@ -119,7 +124,7 @@
 </div>
     <script>
         function createFloatingHearts() {
-            const container = document.body;
+            const container = document.querySelector(".heart123");
             for (let i = 0; i < 50; i++) {
                 const heart = document.createElement('div');
                 heart.className = 'hearts';
